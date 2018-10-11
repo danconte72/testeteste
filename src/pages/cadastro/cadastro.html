@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Meu {{titulo}}</ion-title>
+  </ion-navbar>
+  
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary" floating>Titulo</ion-label>
+      <ion-input [(ngModel)]="titulo" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" floating>Altura</ion-label>
+      <ion-input [(ngModel)]="altura" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" floating>Peso</ion-label>
+      <ion-input [(ngModel)]="peso" ></ion-input>
+    </ion-item>
+    <ion-item>
+      {{peso/(altura*altura)}}
+    </ion-item>
+  </ion-list>
+  <button ion-button (click)="adicionar()" >Mais um</button>
+  <ion-list>
+    <ion-item *ngFor="let item of lista">
+      {{item}}
+    </ion-item>  
+  </ion-list>
+  
+</ion-content>
